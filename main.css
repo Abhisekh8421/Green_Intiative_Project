@@ -1,7 +1,6 @@
 @font-face {
   font-family: Flood;
   src: url("./assets/Flood\ Std\ Regular.otf");
-  font-display: swap;
 }
 
 body {
@@ -243,7 +242,6 @@ body {
 
 .intiate-img {
   width: 100%;
-  width: 248px;
   height: 176px;
   position: absolute;
   padding-top: 25px;
@@ -306,7 +304,6 @@ body {
   color: #ffffff;
   font-size: 2.75rem;
   line-height: 44px;
-  width: 230px;
 }
 
 .change-action-btn {
@@ -620,13 +617,9 @@ body {
 }
 
 .footer-items {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 30px 25px;
-}
-
-.footer-items > div {
-  width: calc(50% - 20px);
 }
 
 .logo-name {
@@ -745,15 +738,16 @@ body {
 }
 
 .footer-tagline {
-  margin-top: 10px;
+  grid-column: 2;
+  justify-self: end;
   width: 180px;
-  display: flex;
-  align-self: flex-end;
+  margin-top: 30px;
 }
 
 .footer-tagline-text {
   font-family: Flood;
   margin: 0;
+
   font-size: 2.75rem;
   font-weight: normal;
   line-height: 46px;
@@ -782,7 +776,7 @@ body {
     flex-direction: row;
     gap: 20px;
   }
-  .nav-link{
+  .nav-link {
     font-size: 1rem;
     line-height: 20px;
     letter-spacing: -0.14px;
@@ -801,7 +795,7 @@ body {
   }
   .banner-box {
     margin-top: 130px;
-    width: 600px;
+    width: 550px;
     margin-bottom: 60px;
   }
   .banner-title {
@@ -976,12 +970,12 @@ body {
     font-size: 0.875rem;
   }
 
-  .future{
-    padding-top: 50px ;
+  .future {
+    padding-top: 50px;
   }
   .future-title {
     width: 518px;
-    align-self:flex-start;
+    align-self: flex-start;
     text-align: left;
   }
 
@@ -1016,22 +1010,399 @@ body {
     left: auto;
     right: 450px;
   }
-  .future-item-title{
+  .future-item-title {
     text-align: left;
     font-size: 1.75rem;
     line-height: 36px;
     margin-top: 80px;
     padding-left: 35px;
   }
-  .future-item-text{
+  .future-item-text {
     text-align: left;
     font-size: 1rem;
     letter-spacing: -0.16px;
     line-height: 24px;
   }
-  .future-item-info .read-more-btn{
+  .future-item-info .read-more-btn {
     align-self: flex-start;
     margin-left: 40px;
+  }
 
+  .subscribe {
+    padding: 3.8125rem 4rem 3.9375rem;
+  }
+  .subscribe-title {
+    width: 70%;
+    margin-bottom: 20px;
+  }
+  .subscribe-section input {
+    width: 64%;
+    text-align: left;
+    padding-left: 1.875rem;
+    margin-right: 3%;
+  }
+  .subscribe-btn {
+    width: 25%;
+  }
+
+  .footer {
+    padding: 3.75rem 4.6875rem 3.3125rem 4rem;
+  }
+  .footer-items {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .learn-more {
+    grid-column: 2;
+  }
+  .footer-tagline {
+    grid-column: 3;
+    text-align: left;
+  }
+  .footer-logo {
+    width: 9.5625rem;
+    font-size: 1.375rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .navbar {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .top-row {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 0;
+    width: 70%;
+  }
+
+  .links {
+    flex-direction: row;
+    gap: 70px;
+  }
+
+  .donate-btn {
+    width: auto;
+    padding: 0 25px;
+    align-self: auto;
+  }
+  .logo-name {
+    width: 160px;
+  }
+  .nav-link {
+    font-size: 1rem;
+    letter-spacing: -0.16px;
+    line-height: 24px;
+    text-align: left;
+  }
+  .banner-top {
+    background-image: url("./assets/home/annie-spratt-desktop.png");
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    padding: 120px 80px;
+    gap: 90px;
+  }
+  .banner-title {
+    width: 38%;
+    margin: 0;
+    font-size: 4.5rem;
+    line-height: 76px;
+  }
+
+  .banner-box {
+    margin-top: 0;
+    width: 50%;
+    align-self: flex-start;
+    text-align: left;
+    padding: 1.8rem;
+  }
+  .lable-1 {
+    left: 25%;
+  }
+  .issue-text {
+    text-align: left;
+    padding-left: 30px;
+    font-size: 0.8rem;
+  }
+  .issue-title {
+    font-size: 2rem;
+    text-align: left;
+    line-height: 46px;
+    max-width: 420px;
+    padding-left: 30px;
+  }
+  .banner-bottom {
+    flex-direction: row;
+    padding: 40px 80px;
+  }
+  .action {
+    width: 25%;
+  }
+  .action-title {
+    font-size: 1.75rem;
+    line-height: 1.5rem;
+  }
+  .action-text {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: -0.01rem;
+  }
+  .mission {
+    padding: 90px 80px;
+  }
+  .lable-3 {
+    align-self: flex-start;
+  }
+  .mission-title {
+    text-align: left;
+    font-size: 2rem;
+    line-height: 3rem;
+    text-align: left;
+  }
+  .intiate-list {
+    display: flex;
+    gap: 3rem;
+  }
+  .intiate-img {
+    left: 58%;
+    height: 40%;
+  }
+  .intiate-title {
+    text-align: left;
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+  .intiate-text {
+    width: auto;
+    text-align: left;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: -0.01rem;
+    margin-top: 0;
+  }
+  .read-more-btn {
+    align-self: flex-start;
+  }
+  .change {
+    background-image: url("./assets/home/Did\ you\ know\ background-desktop.png");
+    flex-direction: row;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 120px 80px;
+    gap: 120px;
+  }
+
+  .change > div:first-child {
+    flex: 1;
+  }
+  .change-title {
+    font-size: 3.5rem;
+    line-height: 4rem;
+    margin-top: 0;
+  }
+
+  .change-lists {
+    flex: 1.5;
+    margin-top: 0;
+    gap: 20px;
+  }
+
+  .change-item .lable-1 {
+    top: -20px;
+    left: 21.5%;
+  }
+  .item-title {
+    font-size: 2rem;
+    line-height: 20px;
+  }
+  .item-text {
+    letter-spacing: -0.16px;
+    font-size: 1rem;
+    line-height: 24px;
+    font-weight: lighter;
+  }
+  .change-item {
+    padding: 36px;
+    gap: 60px;
+  }
+  .media-icon {
+    margin: 10px;
+  }
+  .story {
+    flex-direction: row-reverse;
+    padding: 80px;
+  }
+  .story-image {
+    width: 60%;
+    height: 100%;
+  }
+  .story-info {
+    position: absolute;
+    left: 10%;
+    width: 38%;
+  }
+  .story-lable {
+    left: 20%;
+  }
+  .story-info-quote {
+    font-size: 1.375rem;
+    line-height: 1.75rem;
+    margin-bottom: 2.6875rem;
+  }
+  .story-info-person {
+    font-size: 0.875rem;
+    line-height: 1.0625rem;
+    letter-spacing: 0.035rem;
+  }
+  .story .read-more-btn {
+    position: absolute;
+    align-self: flex-end;
+    left: 10%;
+  }
+  .future {
+    padding: 80px;
+  }
+  .future-title {
+    display: flex;
+    align-self: flex-start;
+    font-size: 4rem;
+    line-height: 4.75rem;
+    text-align: left;
+    width: 80%;
+  }
+  .future-item-1 {
+    flex-direction: row;
+    gap: 122px;
+  }
+  .future-item-2 {
+    flex-direction: row-reverse;
+    gap: 122px;
+  }
+
+  .future-image {
+    width: 520px; /* bigger image */
+    max-width: 100%; /* prevents overflow when screen shrinks */
+    height: 460px;
+    margin-top: 0;
+    flex-shrink: 0;
+  }
+
+  .future-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .future-item-title {
+    text-align: left;
+    font-size: 2.8rem;
+    line-height: 3rem;
+    margin-top: 60px;
+    padding-left: 0;
+  }
+  .future-item-text {
+    text-align: left;
+    padding: 0;
+    font-size: 1.25rem;
+    line-height: 2rem;
+    letter-spacing: -0.025rem;
+  }
+  .future-lable {
+    left: 720px;
+    top: -20px;
+  }
+  .future-item-2 .future-lable {
+    right: 400px;
+    left: -410px;
+  }
+  .subscribe {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 80px;
+    gap: 40px;
+  }
+
+  .subscribe-title {
+    max-width: 580px;
+    font-size: 1.7rem;
+    line-height: 36px;
+  }
+
+  .subscribe-section {
+    flex: 1;
+    justify-content: flex-end;
+    gap: 20px;
+  }
+
+  .subscribe-section input {
+    width: 390px;
+    flex: 0 1 auto;
+    text-align: left;
+    padding-left: 20px;
+  }
+
+  .subscribe-btn {
+    width: 160px;
+    height: 48px;
+  }
+  .footer {
+    padding: 80px;
+  }
+
+  .footer-items {
+    display: flex;
+    align-items: flex-start; /* top alignment */
+    gap: 6rem;
+  }
+
+  .footer-tagline {
+    margin-top: 0;
+  }
+  .logo-name {
+    font-size: 1.375rem;
+    line-height: 1.75rem;
+  }
+
+  .contact-us-title,
+  .follow-us-title,
+  .learn-more-title {
+    position: relative;
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    letter-spacing: 0.035rem;
+  }
+
+  .contact-us-title::after,
+  .follow-us-title::after,
+  .learn-more-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #354463;
+  }
+
+  .footer-tagline-text {
+    line-height: 60px;
+    display: flex;
+  }
+  .contact-item,
+  .follow-link,
+  .learn-more-link {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 }
