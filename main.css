@@ -1167,17 +1167,32 @@ body {
   .intiate-list {
     display: flex;
     gap: 3rem;
+    align-items: stretch;
+  }
+
+  .intiate {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
   }
   .intiate-img {
-    left: 58%;
-    height: 40%;
+    width: 300px;
+    height: 230px;
+    object-fit: cover;
+    left: 65%;
+  }
+  .intiate-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
   }
   .intiate-title {
     text-align: left;
     font-size: 1.75rem;
     line-height: 2.25rem;
     margin-bottom: 10px;
-    margin-top: 10px;
+    margin-top: 50px;
   }
   .intiate-text {
     width: auto;
@@ -1189,6 +1204,7 @@ body {
   }
   .read-more-btn {
     align-self: flex-start;
+    margin-top: auto;
   }
   .change {
     background-image: url("./assets/home/Did\ you\ know\ background-desktop.png");
@@ -1220,6 +1236,21 @@ body {
     top: -20px;
     left: 21.5%;
   }
+  .change-item {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .item-info {
+    flex: 1;
+  }
+
+  .social-media-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-left: auto;
+  }
   .item-title {
     font-size: 2rem;
     line-height: 20px;
@@ -1240,15 +1271,21 @@ body {
   .story {
     flex-direction: row-reverse;
     padding: 80px;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
   }
   .story-image {
-    width: 60%;
-    height: 100%;
+    width: 65%;
+    position: relative;
+    max-width: 680px;
+    height: auto;
   }
   .story-info {
     position: absolute;
-    left: 10%;
+    left: 110px;
     width: 38%;
+    max-width: 420px;
   }
   .story-lable {
     left: 20%;
@@ -1266,7 +1303,7 @@ body {
   .story .read-more-btn {
     position: absolute;
     align-self: flex-end;
-    left: 10%;
+    left: 110px;
   }
   .future {
     padding: 80px;
@@ -1316,12 +1353,14 @@ body {
     letter-spacing: -0.025rem;
   }
   .future-lable {
-    left: 720px;
-    top: -20px;
+    position: relative;
+    display: flex;
+    align-self: start;
   }
   .future-item-2 .future-lable {
-    right: 400px;
-    left: -410px;
+    position: relative;
+    display: flex;
+    align-self: flex-start;
   }
   .subscribe {
     flex-direction: row;
