@@ -1,6 +1,6 @@
 @font-face{
     font-family:Flood;
-    src:url(/Flood-Std-Regular/Flood-Std-Regular.otf);
+    src:url("./assets/Flood-Std-Regular.otf");
 }
 body{
     font-family:Helvetica;
